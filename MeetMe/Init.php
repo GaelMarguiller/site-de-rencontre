@@ -1,4 +1,5 @@
 <?php
+namespace MeetMe;
 /**
  * Initialisation du site de rencontre
  * @author gael

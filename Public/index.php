@@ -17,17 +17,17 @@ if(isset($url_composants[2])){
 }else{
     $action_name = "index";
 }
-$class_name = ucfirst($controller_name)
+$class_name = "Controller\\".ucfirst($controller_name)
     ."Controller";
 global $pdo;
 try{
     $controller = new $class_name($pdo);
 }catch(Exception $e){
-    $controller = new ErrorController($pdo);
+    $controller = new Controller\ErrorController($pdo);
 }
 $action = strtolower($action_name)."Action";
 if(!method_exists($controller,$action)){
-    $controller = new ErrorController($pdo);
+    $controller = new Controller\ErrorController($pdo);
     $action = "e404";
 }
 $result = $controller->$action();

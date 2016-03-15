@@ -1,4 +1,5 @@
 <?php
+namespace MatchMe;
 /**
  * Created by PhpStorm.
  * User: Wrex
